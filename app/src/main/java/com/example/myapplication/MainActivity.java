@@ -1,54 +1,41 @@
 package com.example.myapplication;
 
+import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-import com.google.android.material.textfield.TextInputEditText;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-    private Integer x=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        setContentView(R.layout.actvity_main);
 
-
-        //  Referenciando os elementos da interface
+        // Referenciando os elementos da interface
         EditText txtUsuario = findViewById(R.id.txtUsuario);
         EditText txtSenha = findViewById(R.id.txtSenha);
-        Button btnEntrar = findViewById(R.id.btnEntrar);
+        Button btnApp = findViewById(R.id.btnApp);
+        ImageView imgLogo = findViewById(R.id.imgLogo);
 
-        //  Definindo ação ao clicar no botão
-        btnEntrar.setOnClickListener(v -> {
-            String usuario=txtUsuario.getText().toString();
-            String senha=txtSenha.getText().toString();
+        // Definindo ação ao clicar no botão
+        btnApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String usuario = txtUsuario.getText().toString();
+                String senha = txtSenha.getText().toString();
 
-            if(usuario.equals("admin") &&  senha.equals("admin")){
-                //ABRIR NOVA VISUALIZAÇÃO
-                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
-                startActivity(intent);
-            } else {
-                Toast.makeText(MainActivity.this, "Usuário ou senha incorretos", Toast.LENGTH_SHORT).show();
+                if (usuario.equals("admin") && senha.equals("1234")) {
+                    // Abrir nova activity (por exemplo, HomeActivity)
+                    Intent intent = new Intent(MainActivity.this, MenuAcitivity.class);
+                    startActivity(intent);
+                } else {
+                    txtUsuario.setError("Usuário ou senha incorretos!");
+                }
             }
-
         });
-
     }
 }

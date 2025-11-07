@@ -1,61 +1,124 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ED0F0F"
-    android:backgroundTint="#8C297C">
+    tools:context=".MainActivity"
+    android:background="#ECECEC">
+
+    <!-- Botão Frases -->
+
+    <!-- Botão Moedas -->
+
+    <!-- Botão Temperatura -->
 
     <Button
-        android:id="@+id/btnabrircep"
-        android:layout_width="238dp"
-        android:layout_height="74dp"
-        android:backgroundTint="#180404"
-        android:text="Consultar CEP"
+        android:id="@+id/btnabrircachorro"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#9C27B0"
+        android:text="Foto de Cachorro"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.736" />
-
-    <TextView
-        android:id="@+id/txtView3"
-        android:layout_width="186dp"
-        android:layout_height="52dp"
-        android:background="#F7F4ECEC"
-        android:backgroundTint="#EDDEDE"
-        android:text="Aplicativo Unitário"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="105dp" />
+        app:layout_constraintVertical_bias="0.765" />
 
     <Button
-        android:id="@+id/btnabrirtemperatura"
-        android:layout_width="233dp"
-        android:layout_height="47dp"
-        android:backgroundTint="#0F0E0E"
-        android:text="Coversor de temperatura"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="418dp" />
+        android:id="@+id/btnabrircapturaimg"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#9C27B0"
+        android:text="Captura de Imagem"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.661" />
 
     <Button
-        android:id="@+id/btnabrirmoedas"
-        android:layout_width="211dp"
-        android:layout_height="49dp"
-        android:backgroundTint="#040303"
-        android:text="Coversor de Moedas"
-        tools:layout_editor_absoluteX="108dp"
-        tools:layout_editor_absoluteY="341dp" />
+        android:id="@+id/btnabrirlistacompras"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#9C27B0"
+        android:text="Lista de Compras"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.551" />
 
     <Button
         android:id="@+id/btnabrirfrase"
-        android:layout_width="207dp"
-        android:layout_height="68dp"
-        android:background="#AD4C4C"
-        android:backgroundTint="#0F0C0C"
-        android:text="Frases do dia "
-        tools:layout_editor_absoluteX="108dp"
-        tools:layout_editor_absoluteY="231dp" />
+        android:layout_width="208dp"
+        android:layout_height="43dp"
+        android:backgroundTint="#2196F3"
+        android:text="Frases"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.088" />
+
+    <!-- Botão CEP -->
+
+    <Button
+        android:id="@+id/btnabrirmoedas"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4CAF50"
+        android:text="Conversor de Moedas"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.342" />
+
+    <Button
+        android:id="@+id/btnabrirtemperatura"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FF9800"
+        android:text="Temperatura"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.191" />
+
+    <Button
+        android:id="@+id/btnabrircep"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#9C27B0"
+        android:text="Buscar CEP"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

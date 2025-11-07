@@ -14,9 +14,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class CepActivity extends AppCompatActivity {
+public class cepActivity extends AppCompatActivity {
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cep);
@@ -26,17 +25,21 @@ public class CepActivity extends AppCompatActivity {
         TextView txtResultadoCEP = findViewById(R.id.txtResultadoCEP);
 
         btnConsultaCEP.setOnClickListener(v -> {
+
             String cep = txtCEP.getText().toString();
 
             if (!cep.isEmpty()) {
-                buscarEndereco(cep, txtResultadoCEP);
+                buscarEndereco(cep,txtResultadoCEP );
             } else {
                 txtResultadoCEP.setText("Digite um CEP válido.");
+
             }
+
         });
+
     }
 
-    private void buscarEndereco(String cep, TextView txtResultadoCEP) {
+    private void buscarEndereco(String cep, TextView txtResultadoCEP){
         new Thread(() -> {
             String url = "https://viacep.com.br/ws/" + cep + "/json/";
             try {
@@ -56,7 +59,7 @@ public class CepActivity extends AppCompatActivity {
 
                 JSONObject jsonObject = new JSONObject(resultado.toString());
 
-                String logradouro = jsonObject.optString("logradouro", "");
+                String logradouro = jsonObject.optString("logradouro", ""); // optString evita exceções
                 String bairro = jsonObject.optString("bairro", "");
                 String localidade = jsonObject.optString("localidade", "");
                 String uf = jsonObject.optString("uf", "");

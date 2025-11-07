@@ -1,4 +1,4 @@
-package com.example.applicativoteste;
+package com.example.myapplication;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -10,7 +10,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 public class ConversorActivity extends AppCompatActivity {
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
@@ -30,7 +33,7 @@ public class ConversorActivity extends AppCompatActivity {
         EditText txtValor = findViewById(R.id.txtValor);
         Spinner spMoeda = findViewById(R.id.spMoeda);
         Button btnConversor = findViewById(R.id.btnConversor);
-        Button btnVoltarConversor = findViewById(R.id.btnVoltarConversor);
+        Button btnVoltarConversor = findViewById(R.id.btnConversor);
         TextView txtResultado = findViewById(R.id.txtResultado);
 
         // Aplicar o adapter ao Spinner
@@ -55,9 +58,6 @@ public class ConversorActivity extends AppCompatActivity {
             txtResultado.setText(String.format("Valor convertido: %.2f %s", resultado, moeda));
         });
 
-        btnVoltarConversor.setOnClickListener(v->{
-            onBackPressed();
-        });
 
 
     }

@@ -1,4 +1,4 @@
-package com.example.dogapp;
+package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Bitmap;
@@ -15,7 +15,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class MainActivity extends AppCompatActivity {
+public class Cachorro extends AppCompatActivity {
 
     private ImageView imgCachorro;
     private Button btnMostrarCachorro;
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.cachorro);
 
         imgCachorro = findViewById(R.id.imgCachorro);
         btnMostrarCachorro = findViewById(R.id.btnMostrarCachorro);
