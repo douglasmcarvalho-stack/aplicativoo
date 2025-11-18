@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.actvity_main);
+        setContentView(R.layout.funcionario);
 
         // Referenciando os elementos da interface
         EditText txtUsuario = findViewById(R.id.txtUsuario);

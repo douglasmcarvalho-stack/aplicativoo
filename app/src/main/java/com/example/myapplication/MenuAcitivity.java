@@ -21,6 +21,7 @@ public class MenuAcitivity extends AppCompatActivity {
         Button btnabrirlistacompras = findViewById(R.id.btnabrirlistacompras);
         Button btnabrircapturaimg = findViewById(R.id.btnabrircapturaimg);
         Button btnabrircachorro = findViewById(R.id.btnabrircachorro);
+        Button btnProduto = findViewById(R.id.btnProduto);
 
         // Botão para abrir a tela de frases
         btnabrirfrase.setOnClickListener(v -> {
@@ -59,7 +60,15 @@ public class MenuAcitivity extends AppCompatActivity {
         btnabrircapturaimg.setOnClickListener(v -> {
             Intent intent = new Intent(MenuAcitivity.this, capturaImagem.class);
             startActivity(intent);
+
         });
+
+        btnProduto.setOnClickListener(v -> {
+            Intent intent = new Intent(MenuAcitivity.this, Pruduto.class);
+            startActivity(intent);
+
+        });
+
 
     }
 }

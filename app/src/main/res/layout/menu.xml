@@ -121,4 +121,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.448" />
 
+    <Button
+        android:id="@+id/btnProduto"
+        android:layout_width="185dp"
+        android:layout_height="42dp"
+        android:text="Produto"
+        tools:layout_editor_absoluteX="108dp"
+        tools:layout_editor_absoluteY="609dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
